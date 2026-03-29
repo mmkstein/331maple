@@ -8,6 +8,9 @@ export interface Props {
   body: string;
 }
 const { id, to, toEmail, toLink, subject, body } = Astro.props;
+const mailtoHref = toEmail
+  ? `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  : null;
 ---
 
 <div class="email-block">
@@ -22,6 +25,7 @@ const { id, to, toEmail, toLink, subject, body } = Astro.props;
   <p class="email-subject">Subject: {subject}</p>
   <div class="email-body" id={id} set:html={body.replace(/\n/g, '<br />')} />
   <div class="email-actions">
+    {mailtoHref && <a class="open-btn" href={mailtoHref}>Open in Email App</a>}
     <button class="copy-btn" data-email-id={id}>Copy Email</button>
     <button class="expand-btn" data-email-id={id}>Read More</button>
   </div>
@@ -80,6 +84,22 @@ const { id, to, toEmail, toLink, subject, body } = Astro.props;
     flex-wrap: wrap;
   }
 
+  .open-btn {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: rgba(200,40,26,0.15);
+    border: 1px solid rgba(200,40,26,0.5);
+    color: var(--red);
+    padding: 0.45rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .open-btn:hover { background: rgba(200,40,26,0.25); border-color: var(--red); }
+
   .copy-btn, .expand-btn {
     font-size: 0.72rem;
     letter-spacing: 0.1em;
@@ -98,6 +118,6 @@ const { id, to, toEmail, toLink, subject, body } = Astro.props;
   @media (max-width: 768px) {
     .email-block { padding: 1.2rem; }
     .email-actions { flex-direction: column; gap: 0.6rem; }
-    .copy-btn, .expand-btn { width: 100%; text-align: center; padding: 0.65rem 1rem; }
+    .open-btn, .copy-btn, .expand-btn { width: 100%; text-align: center; padding: 0.65rem 1rem; }
   }
 </style>

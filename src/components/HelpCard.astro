@@ -3,21 +3,38 @@ export interface Props {
   num: string;
   title: string;
   body: string;
-  linkHref: string;
-  linkLabel: string;
+  linkHref?: string | null;
+  linkLabel?: string | null;
   external?: boolean;
+  shareBtn?: boolean;
 }
-const { num, title, body, linkHref, linkLabel, external = false } = Astro.props;
+const { num, title, body, linkHref, linkLabel, external = false, shareBtn = false } = Astro.props;
 ---
 
 <div class="help-card reveal">
   <div class="help-card-num">{num}</div>
   <h3>{title}</h3>
   <p>{body}</p>
-  <a href={linkHref} class="card-link" target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined}>
-    → {linkLabel}
-  </a>
+  {shareBtn
+    ? <button class="card-link card-share-btn">→ Share This Page</button>
+    : linkHref && <a href={linkHref} class="card-link" target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined}>→ {linkLabel}</a>
+  }
 </div>
+
+<script>
+  document.querySelectorAll('.card-share-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const data = { title: 'Save 331 Maple St', text: 'A 12-story luxury tower is planned for Prospect Lefferts Gardens. Sign the petition and help stop it.', url: window.location.origin };
+      if (navigator.share) {
+        try { await navigator.share(data); } catch {}
+      } else {
+        try { await navigator.clipboard.writeText(window.location.origin); } catch {}
+        btn.textContent = '→ Link Copied!';
+        setTimeout(() => { btn.textContent = '→ Share This Page'; }, 1800);
+      }
+    });
+  });
+</script>
 
 <style>
   .help-card {
@@ -67,6 +84,14 @@ const { num, title, body, linkHref, linkLabel, external = false } = Astro.props;
   }
 
   .card-link:hover { color: var(--accent); }
+
+  .card-share-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+  }
 
   @media (max-width: 768px) {
     .help-card { padding: 1.5rem; }
