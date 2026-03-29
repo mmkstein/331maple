@@ -7,6 +7,7 @@
     Questions? <a href="#" id="footer-contact" class="protected-email">Contact Amy Lin</a>
   </p>
   <p class="footer-note">Names shown by first name and street only, with permission.</p>
+  <p class="footer-note">Want to get more involved? <a href="#" id="footer-join" class="protected-email">Reach out to Amy.</a></p>
 </footer>
 
 <style>
@@ -51,10 +52,10 @@
 </style>
 
 <script>
-  const a = document.getElementById('footer-contact');
-  if (a) {
-    const u = 'amy.qing.lin';
-    const d = 'gmail.com';
-    a.href = `mailto:${u}@${d}`;
-  }
+  const u = 'amy.qing.lin';
+  const d = 'gmail.com';
+  const contact = document.getElementById('footer-contact');
+  if (contact) contact.href = `mailto:${u}@${d}`;
+  const join = document.getElementById('footer-join');
+  if (join) join.href = `mailto:${u}@${d}?subject=I want to get involved — Save 331 Maple St`;
 </script>

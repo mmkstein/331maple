@@ -272,11 +272,7 @@ FIRST: IMMEDIATE ACTION ON 331 MAPLE ST
 
 With demolition of the 335 Maple St. Parish School imminent, I am asking your office to escalate in every way available. Please formally request that the NYC Department of Buildings halt demolition pending a full review of the FAR calculations, open space ratios, and any lot merging or air rights transfers. Please continue pressing the Diocese for a meaningful meeting with actual decision-makers. Please consider a formal call for a Community Benefits Agreement requiring a significantly reduced building height and meaningful affordable housing — the current plan includes zero.
 
-SECOND: TAX REVENUE AND PUBLIC SUBSIDY CONCERNS
-
-This land currently sits on the tax rolls as church property — exempt from property taxes. A 99-year lease transferring it to a private developer for luxury housing raises serious questions about whether that exemption should continue, and what tax revenue the city may be losing. I am asking your office to investigate whether the property's tax-exempt status is still appropriate given the nature of this arrangement, and to determine whether the developer intends to pursue 421-a or any other city tax abatement. If so, the public would effectively be subsidizing luxury development twice over — once through the tax-exempt land, and again through a city abatement — while receiving zero affordable units in return.
-
-THIRD: CONTEXTUAL REZONING STUDY FOR PLG
+SECOND: CONTEXTUAL REZONING STUDY FOR PLG
 
 331 Maple St is not an isolated incident. It is the predictable consequence of leaving PLG without the contextual zoning protections that Park Slope, Windsor Terrace, and Kensington have had for years. Our zoning parameters were last updated in 1961.
 
@@ -379,6 +375,7 @@ Prospect Lefferts Gardens, Brooklyn`} />
       <HelpCard num="04" title="Contact Elected Officials" body="Email Council Member Rita Joseph and Assemblymember Brian Cunningham to express support and urge escalation — including a formal DOB review before demolition." linkHref="#emails" linkLabel="See Templates" />
       <HelpCard num="05" title="File a DOB Complaint" body="Contact the NYC Department of Buildings and formally request a review of the FAR calculations, open space ratios, and air rights transfers before any demolition proceeds." linkHref="https://nyc.gov/buildings" linkLabel="NYC Buildings Site" external={true} />
       <HelpCard num="06" title="Show Up in Person" body="A Sunday demonstration outside St. Francis of Assisi at 1081 Nostrand Ave during Mass is one of the most visible ways to put pressure on church leadership. Bring neighbors." linkHref="#contacts" linkLabel="Get the Address" />
+      <HelpCard num="07" title="Join the Effort" body="Want to canvass, attend meetings, or help organize? This campaign runs on neighbors showing up for neighbors. Reach out and get involved." linkHref="#" linkLabel="Contact Amy" />
     </div>
   </div>
 </section>
@@ -512,6 +509,9 @@ Prospect Lefferts Gardens, Brooklyn`} />
     document.querySelectorAll<HTMLAnchorElement>('.protected-email').forEach(a => {
       a.href = `mailto:${u}@${d}`;
     });
+    // Join the Effort card — 7th help card link
+    const joinLink = document.querySelector<HTMLAnchorElement>('.help-card:nth-child(7) .card-link');
+    if (joinLink) joinLink.href = `mailto:${u}@${d}?subject=I want to get involved — Save 331 Maple St`;
   })();
 
   // Accordion
