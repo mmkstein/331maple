@@ -1,0 +1,74 @@
+---
+export interface Props {
+  num: string;
+  title: string;
+  body: string;
+  linkHref: string;
+  linkLabel: string;
+  external?: boolean;
+}
+const { num, title, body, linkHref, linkLabel, external = false } = Astro.props;
+---
+
+<div class="help-card reveal">
+  <div class="help-card-num">{num}</div>
+  <h3>{title}</h3>
+  <p>{body}</p>
+  <a href={linkHref} class="card-link" target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined}>
+    → {linkLabel}
+  </a>
+</div>
+
+<style>
+  .help-card {
+    background: rgba(245,239,224,0.04);
+    border: 1px solid rgba(245,239,224,0.1);
+    padding: 2rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .help-card:hover {
+    border-color: rgba(200,40,26,0.5);
+    background: rgba(200,40,26,0.06);
+  }
+
+  .help-card-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: var(--red);
+    opacity: 0.4;
+    line-height: 1;
+    margin-bottom: 0.8rem;
+  }
+
+  .help-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--cream);
+  }
+
+  .help-card p {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: rgba(245,239,224,0.6);
+    margin-bottom: 1rem;
+  }
+
+  .card-link {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--red);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .card-link:hover { color: var(--accent); }
+
+  @media (max-width: 768px) {
+    .help-card { padding: 1.5rem; }
+  }
+</style>

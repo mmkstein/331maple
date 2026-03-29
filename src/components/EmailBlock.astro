@@ -1,0 +1,103 @@
+---
+export interface Props {
+  id: string;
+  to: string;
+  toEmail?: string;
+  toLink?: string;
+  subject: string;
+  body: string;
+}
+const { id, to, toEmail, toLink, subject, body } = Astro.props;
+---
+
+<div class="email-block">
+  <p class="email-to">
+    To: {toEmail
+      ? <a href={`mailto:${toEmail}`}>{to}</a>
+      : toLink
+        ? <a href={toLink} target="_blank" rel="noopener">{to}</a>
+        : to
+    }
+  </p>
+  <p class="email-subject">Subject: {subject}</p>
+  <div class="email-body" id={id} set:html={body.replace(/\n/g, '<br />')} />
+  <div class="email-actions">
+    <button class="copy-btn" data-email-id={id}>Copy Email</button>
+    <button class="expand-btn" data-email-id={id}>Read More</button>
+  </div>
+</div>
+
+<style>
+  .email-block {
+    background: rgba(245,239,224,0.04);
+    border: 1px solid rgba(245,239,224,0.1);
+    padding: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .email-block:last-child { margin-bottom: 0; }
+
+  .email-to {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(245,239,224,0.4);
+    margin-bottom: 0.4rem;
+  }
+  .email-to a { color: rgba(245,239,224,0.5); }
+
+  .email-subject {
+    font-weight: 500;
+    color: var(--cream);
+    font-size: 0.92rem;
+    margin-bottom: 1rem;
+  }
+
+  .email-body {
+    font-size: 0.86rem;
+    line-height: 1.7;
+    color: rgba(245,239,224,0.55);
+    max-height: 220px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.4s ease;
+  }
+  .email-body.expanded { max-height: 2000px; }
+  .email-body::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 60px;
+    background: linear-gradient(transparent, rgba(18,14,10,0.95));
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  .email-body.expanded::after { opacity: 0; }
+
+  .email-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .copy-btn, .expand-btn {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid rgba(245,239,224,0.2);
+    color: rgba(245,239,224,0.55);
+    padding: 0.45rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .copy-btn:hover, .expand-btn:hover { border-color: var(--red); color: var(--cream); }
+  .copy-btn.copied { border-color: #22c55e; color: #22c55e; }
+
+  @media (max-width: 768px) {
+    .email-block { padding: 1.2rem; }
+    .email-actions { flex-direction: column; gap: 0.6rem; }
+    .copy-btn, .expand-btn { width: 100%; text-align: center; padding: 0.65rem 1rem; }
+  }
+</style>

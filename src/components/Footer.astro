@@ -1,0 +1,60 @@
+---
+---
+<footer>
+  <span class="footer-logo">Save 331 Maple St</span>
+  <p>
+    A community campaign by residents of Prospect Lefferts Gardens, Brooklyn.<br />
+    Questions? <a href="#" id="footer-contact" class="protected-email">Contact Amy Lin</a>
+  </p>
+  <p class="footer-note">Names shown by first name and street only, with permission.</p>
+</footer>
+
+<style>
+  footer {
+    background: #080808;
+    border-top: 1px solid rgba(200,40,26,0.2);
+    padding: 3rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+    color: var(--cream);
+    opacity: 0.4;
+  }
+
+  footer p {
+    font-size: 0.78rem;
+    color: rgba(245,239,224,0.3);
+    text-align: center;
+  }
+
+  footer p a {
+    color: rgba(200,40,26,0.7);
+    text-decoration: none;
+  }
+
+  .footer-note {
+    opacity: 0.6;
+    font-size: 0.7rem !important;
+  }
+
+  @media (max-width: 600px) {
+    footer { flex-direction: column; text-align: center; }
+  }
+</style>
+
+<script>
+  const a = document.getElementById('footer-contact');
+  if (a) {
+    const u = 'amy.qing.lin';
+    const d = 'gmail.com';
+    a.href = `mailto:${u}@${d}`;
+  }
+</script>

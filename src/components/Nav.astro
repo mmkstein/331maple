@@ -1,0 +1,131 @@
+---
+export interface Props {
+  activePage?: 'home' | 'voices';
+}
+const { activePage = 'home' } = Astro.props;
+const home = activePage === 'home';
+---
+
+<nav>
+  {home
+    ? <span class="nav-logo">Save 331 Maple St</span>
+    : <a href="/" class="nav-logo">Save 331 Maple St</a>
+  }
+  <button class="nav-hamburger" aria-label="Open menu" id="nav-toggle">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href={home ? '#about' : '/#about'}>The Issue</a></li>
+    <li><a href={home ? '#petition' : '/#petition'}>Sign Now</a></li>
+    <li><a href={home ? '#help' : '/#help'}>Take Action</a></li>
+    <li><a href="/voices" class={activePage === 'voices' ? 'active' : ''}>Neighbor Voices</a></li>
+    <li><a href={home ? '#contacts' : '/#contacts'}>Contacts</a></li>
+  </ul>
+</nav>
+
+<script>
+  const btn = document.getElementById('nav-toggle')!;
+  const links = document.getElementById('nav-links')!;
+
+  btn.addEventListener('click', () => {
+    const isOpen = btn.classList.toggle('open');
+    links.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      btn.classList.remove('open');
+      links.classList.remove('open');
+      btn.setAttribute('aria-label', 'Open menu');
+    });
+  });
+</script>
+
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid rgba(200,40,26,0.25);
+  }
+
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.12em;
+    color: var(--cream);
+    opacity: 0.7;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active { opacity: 1; }
+
+  /* ─── HAMBURGER ─── */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 4px;
+    z-index: 20;
+    flex-shrink: 0;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--cream);
+    transition: transform 0.25s, opacity 0.25s;
+    border-radius: 1px;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.2rem; }
+    .nav-hamburger { display: flex; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--black);
+      flex-direction: column;
+      gap: 0;
+      border-bottom: 1px solid rgba(200,40,26,0.25);
+      z-index: 100;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { border-top: 1px solid rgba(245,239,224,0.06); }
+    .nav-links a { display: block; padding: 0.9rem 1.5rem; font-size: 0.85rem; opacity: 0.8; letter-spacing: 0.1em; }
+  }
+
+  @media (max-width: 400px) {
+    .nav-links a { padding: 1rem 1.2rem; }
+  }
+</style>

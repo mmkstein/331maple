@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import VoiceCard from '../components/VoiceCard.astro';
+import '../styles/global.css';
+
+const voices = [
+  { name: "Ansel", street: "Maple Street", quote: "I've been a member of this community since 1970 and have seen the gradual encroachment of developers in the adjoining neighborhoods. We are one block from the Lefferts Garden Historic neighborhood and on the same block as the church and public library. Adding the height of this planned building will destroy our community." },
+  { name: "Charnette", street: "Lincoln Road", quote: "The hard working homeowners in this community cannot allow our neighbors to be disrespected by the greed of those with the economic advantage. This is a historical neighborhood that should be treated as such. Any large building added to the surrounding properties will negatively impact our quality of life." },
+  { name: "Trevor", street: "Maple Street", quote: "We live across the street. This is a cash grab by the church and developers, both greedy and shameless. Development is fine, but this is a bit extreme for the neighborhood." },
+  { name: "Rebecca", street: "Midwood Street", quote: "Our children need a delicate balance of light, air and green spaces. Out of scale buildings destroy this balance and put all of us at risk. Kings County Hospital Complex has many vacant and underused buildings — these should be repurposed for housing, rather than encouraging wildly out of scale development." },
+  { name: "Calleen", street: "Lincoln Road", quote: "This building of this height would block the natural sunlight my family has had in this house for the last 50+ years. Build with respect to the communities you come into." },
+  { name: "Marcia", street: "Maple Street", quote: "We are a real community, and a building this height is contrary to the community's character and will cut off sunlight to the opposite side of the street. You are helping to open the door to other developers building similar buildings — or taller. A building of 4 or 5 stories would be a better fit." },
+  { name: "Evan", street: "Maple Street", quote: "As a new resident of the neighborhood, I loved the unique feeling of being in our residential area while keeping the buzz of Brooklyn nearby. This building will stick out like a sore thumb, and cause a major disruption to our peaceful and quiet block. Hoping there is at least some compromise to not ruin the appeal and aesthetic of Maple Street." },
+  { name: "Alex", street: "Sterling Street", quote: "This project is not in scale with the context — especially the adjacent church." },
+  { name: "Rolando", street: "Lincoln Road", quote: "I'm all for more housing but buildings larger than 6 or 7 stories are far out of scale for this historic neighborhood." },
+  { name: "Kifah", street: "Lincoln Road", quote: "This monstrosity will ruin this historic neighbourhood and block light to buildings on Lincoln Road. It should never be allowed on a narrow road like Maple Street. Please preserve our landscape and don't allow this terrible project." },
+  { name: "Tamra", street: "Maple Street", quote: "I have had the pleasure of living in this beautiful neighborhood for all 21 years of my life. I would hate to see them tear up the neighborhood I've known all my life. There is nothing wrong with Maple Street. They need to leave my home as is." },
+  { name: "Ellen", street: "Lincoln Road", quote: "This would be an atrocity and would wreck the historic value of this community." },
+  { name: "Arabella", street: "Maple Street", quote: "The buildings that would be destroyed are historically significant and they're beautiful. The huge building proposed would destroy the character of our neighborhood." },
+  { name: "Diana", street: "Midwood Street", quote: "I've lived in PLG for over 15 years and the amount of development I've seen without consulting the local community has only resulted in \"affordable\" apartments that locals can't afford, resulting in a money grab by developers while destroying the local neighborhood. We need to have a discussion about what our future can look like." },
+  { name: "Margaret", street: "Midwood Street", quote: "We need all new housing built with contextual height restrictions to respect and preserve the existing neighborhoods. This proposed building violates the neighborhood context and would significantly change the nature of this neighborhood detrimentally." },
+  { name: "Sereena", street: "Maple Street", quote: "I lived in this neighborhood all my life and it will be such a disappointment to put a building of that height in a residential neighborhood." },
+  { name: "Benjamin", street: "Snyder Avenue", quote: "We need affordable housing, not high-rises. Don't destroy the neighborhood." },
+];
+---
+
+<Layout title="Neighbor Voices — Save 331 Maple St">
+
+<Nav activePage="voices" />
+
+<div class="page-header">
+  <p class="eyebrow"><span>Real Residents. Real Impact.</span></p>
+  <h1 class="page-title">Neighbor<br /><em>Voices.</em></h1>
+  <p class="page-intro">These are the words of the people who live here — on Maple Street, Lincoln Road, Sterling Street, Midwood Street. Their homes. Their sunlight. Their neighborhood.</p>
+  <span class="quote-count">{voices.length} neighbors speak out below</span>
+</div>
+
+<section class="voices-section">
+  <div class="container">
+    <div class="voices-grid">
+      {voices.map(v => <VoiceCard quote={v.quote} name={v.name} street={v.street} />)}
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <h2>Add your voice.</h2>
+  <p>Over 600 neighbors have already signed. Every signature matters — especially with your address included.</p>
+  <div class="cta-buttons">
+    <a href="/#petition" class="btn-primary">Sign the Petition</a>
+    <a href="/#help" class="btn-outline">See All Ways to Help</a>
+  </div>
+</div>
+
+<Footer />
+
+<script>
+  const cards = document.querySelectorAll('.voice-card');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const idx = Array.from(cards).indexOf(entry.target as HTMLElement);
+        setTimeout(() => { entry.target.classList.add('visible'); }, (idx % 3) * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.06 });
+  cards.forEach(card => observer.observe(card));
+</script>
+
+</Layout>
+
+<style is:global>
+  .page-header {
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--black);
+  }
+  .page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 80% at 50% 100%, rgba(200,40,26,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .page-header .eyebrow { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); margin-bottom: 1.2rem; }
+  .page-header .eyebrow span { display: inline-block; background: rgba(200,40,26,0.15); border: 1px solid rgba(200,40,26,0.4); padding: 0.3rem 0.9rem; border-radius: 2px; }
+  .page-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 10vw, 8rem); line-height: 0.92; letter-spacing: 0.02em; color: var(--cream); margin-bottom: 1.5rem; }
+  .page-title em { font-style: normal; color: var(--red); display: block; }
+  .page-intro { max-width: 600px; margin: 0 auto 1.5rem; font-size: 1.05rem; line-height: 1.7; color: rgba(245,239,224,0.65); }
+  .quote-count { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.16em; color: rgba(245,239,224,0.3); text-transform: uppercase; }
+
+  .voices-section { background: var(--black); padding: 4rem 2rem 6rem; }
+  .voices-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+  .cta-strip { background: var(--red); padding: 5rem 2rem; text-align: center; }
+  .cta-strip h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 6vw, 5rem); line-height: 0.95; color: #fff; margin-bottom: 1rem; }
+  .cta-strip p { font-size: 1rem; color: rgba(255,255,255,0.8); max-width: 500px; margin: 0 auto 2rem; line-height: 1.6; }
+  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .cta-strip .btn-primary { background: #fff; color: var(--red); }
+  .cta-strip .btn-primary:hover { background: rgba(255,255,255,0.9); }
+  .cta-strip .btn-outline { border-color: rgba(255,255,255,0.6); color: #fff; }
+  .cta-strip .btn-outline:hover { border-color: #fff; }
+
+  @media (max-width: 960px) { .voices-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 768px) {
+    .page-header { padding: 3.5rem 1.2rem 2.5rem; }
+    .cta-buttons { flex-direction: column; align-items: stretch; }
+    .voices-section { padding: 3rem 1.2rem 4rem; }
+  }
+  @media (max-width: 600px) { .voices-grid { grid-template-columns: 1fr; } }
+</style>

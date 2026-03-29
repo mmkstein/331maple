@@ -1,0 +1,108 @@
+:root {
+  --red: #C8281A;
+  --dark-red: #8B1A10;
+  --cream: #F5EFE0;
+  --black: #0E0E0E;
+  --warm-gray: #2A2520;
+  --mid: #6B5E52;
+  --accent: #E8A020;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* ─── SHARED BUTTONS ─── */
+.btn-primary {
+  background: var(--red);
+  color: #fff;
+  padding: 0.9rem 2.2rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--dark-red); transform: translateY(-2px); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--cream);
+  padding: 0.9rem 2.2rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(245,239,224,0.35);
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.15s;
+  display: inline-block;
+}
+.btn-outline:hover { border-color: var(--cream); transform: translateY(-2px); }
+
+/* ─── SHARED SECTION LABELS ─── */
+.section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.15;
+  color: var(--cream);
+  margin-bottom: 1.5rem;
+}
+
+.section-title em {
+  font-style: italic;
+  color: rgba(245,239,224,0.55);
+}
+
+/* ─── CONTAINER ─── */
+.container { max-width: 1100px; margin: 0 auto; }
+
+section { padding: 6rem 2rem; }
+
+/* ─── REVEAL ANIMATION ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── MOBILE ─── */
+@media (max-width: 768px) {
+  section { padding: 3.5rem 1.2rem; }
+  .btn-primary, .btn-outline { width: 100%; text-align: center; }
+}
+@media (max-width: 600px) {
+  section { padding: 2.5rem 1rem; }
+}
+@media (max-width: 400px) {
+  section { padding: 2rem 0.85rem; }
+}
