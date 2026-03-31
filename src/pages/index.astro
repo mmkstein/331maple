@@ -75,9 +75,9 @@ import '../styles/global.css';
 </section>
 
 <!-- ─── BROADER CONTEXT ─── -->
-<section class="about" id="context" style="background:var(--warm-gray);">
+<section class="about" id="context" style="background:var(--black); border-top:1px solid rgba(200,40,26,0.2); border-bottom:1px solid rgba(200,40,26,0.2);">
   <div class="container">
-    <div class="about-grid">
+    <div class="about-grid" style="margin-top:0">
       <div class="about-body reveal" style="grid-column:1/-1; max-width:800px;">
         <p class="section-label">Broader Context</p>
         <h2 class="section-title">This isn't just about <em>one building.</em></h2>
@@ -89,48 +89,6 @@ import '../styles/global.css';
   </div>
 </section>
 
-<!-- ─── URGENCY ─── -->
-<section class="urgency-section" id="urgency">
-  <div class="container">
-    <div class="reveal" style="text-align:center; margin-bottom:3rem;">
-      <p class="section-label">How We Got Here</p>
-      <h2 class="section-title">The clock is <em>running out.</em></h2>
-    </div>
-    <div class="urgency-grid urgency-grid--timeline-only">
-      <div class="reveal">
-        <div class="timeline">
-        <div class="timeline-item">
-          <div class="tl-dot">✓</div>
-          <div class="tl-text"><strong>Sep 2025 — 99-Year Lease Signed</strong><span>Candor Capital showed Church a 6-story mock-up, then secretly filed for 12 stories with DOB</span></div>
-        </div>
-        <div class="timeline-item">
-          <div class="tl-dot">✓</div>
-          <div class="tl-text"><strong>Oct–Nov 2025 — Community Mobilizes</strong><span>Canvassing from Sterling to Clarkson Ave; hundreds of petition signatures collected; reps engaged</span></div>
-        </div>
-        <div class="timeline-item">
-          <div class="tl-dot">✓</div>
-          <div class="tl-text"><strong>Dec 2025 — Meeting with Representatives</strong><span>Council Member Joseph and Assemblymember Cunningham agree to investigate legality; Church refuses to attend</span></div>
-        </div>
-        <div class="timeline-item">
-          <div class="tl-dot">✓</div>
-          <div class="tl-text"><strong>Jan 2026 — Illegal Demolition Attempted</strong><span>Workers with sledgehammers begin tearing down school without permits. DOB issues Stop Work Order. $30K fine levied.</span></div>
-        </div>
-        <div class="timeline-item">
-          <div class="tl-dot">✓</div>
-          <div class="tl-text"><strong>Feb 2026 — Diocese Sends Uninformed Liaison</strong><span>Church finally agrees to a meeting but sends a political liaison with no knowledge of the development</span></div>
-        </div>
-        <div class="timeline-item">
-          <div class="tl-dot" style="background:var(--accent); color:#000;">!</div>
-          <div class="tl-text"><strong>Mar 2026 — Developer Clearing Violations NOW</strong><span>Stop Work Order violations being cleared. Church still not responding to reps. 600+ signatures and counting.</span></div>
-        </div>
-        <div class="timeline-item">
-          <div class="tl-dot dim">?</div>
-          <div class="tl-text"><strong>Demolition — Imminent</strong><span>Once the Maple Street Parish School comes down, the developer has everything they need to build</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ─── NEIGHBOR QUOTES ─── -->
 
@@ -254,7 +212,7 @@ Prospect Lefferts Gardens, Brooklyn`} />
 
 My name is [YOUR NAME], and I am a proud resident of Prospect Lefferts Gardens writing to urge you to take action on the immediate crisis at 331 Maple St.
 
-I know your office is already engaged on 331 Maple St, and I am deeply grateful for that. Please see if there's any City funding that could be allocated to the Church, especially in support of Providence House that supports women in crisis. We are hoping that an alternative funding from the City will convince the Church to compromise for a shorter building. The community sees it, appreciates your persistence, and is doing everything we can to amplify the pressure alongside you.
+I know your office is already engaged on 331 Maple St, and I am deeply grateful for that. Please see if there's any City funding that could be allocated to the Church, especially in support of Providence House that supports women in crisis. We are hoping that an alternative funding from the City will convince the Church to compromise for a shorter building. The community appreciates your persistence, and we are doing everything we can to amplify the pressure alongside you.
 
 Respectfully,
 [YOUR NAME]
@@ -290,7 +248,7 @@ Prospect Lefferts Gardens, Brooklyn`} />
           <span class="accordion-icon">+</span>
         </button>
         <div class="accordion-content">
-          <EmailBlock id="email-dob" to="buildings@buildings.nyc.gov or via nyc.gov/buildings" toEmail="buildings@buildings.nyc.gov" subject="Formal Concern: Air Rights and Development Legality at 331 Maple St, Brooklyn" body={`Hello,
+          <EmailBlock id="email-dob" to="buildings@buildings.nyc.gov | CC: brooklyn@buildings.nyc.gov" toEmail="buildings@buildings.nyc.gov" subject="Formal Concern: Air Rights and Development Legality at 331 Maple St, Brooklyn" body={`Hello,
 
 My name is [YOUR NAME], and I am a Prospect Lefferts Gardens resident writing to raise a formal concern about the proposed development at 331 Maple St, Brooklyn, NY 11225.
 
@@ -358,13 +316,12 @@ Prospect Lefferts Gardens, Brooklyn`} />
       <h2 class="section-title">Every action <em>counts.</em></h2>
     </div>
     <div class="help-grid">
-      <HelpCard num="01" title="Sign & Share the Petition" body="Over 600 neighbors have already signed. Your address matters — it shows the community impact is real and local. Share with everyone you know in PLG and across Brooklyn." linkHref="https://form.jotform.com/amyqinglin/331maple" linkLabel="Sign Now" external={true} />
-      <HelpCard num="02" title="Email the Diocese" body="Contact Bishop Robert Brennan, Father Vassalotti, and the Diocese directly. A personal email from a constituent lands in a real inbox and demands a real response." linkHref="#emails" linkLabel="Get Email Templates" />
-      <HelpCard num="03" title="Contact Elected Officials" body="Email Council Member Rita Joseph and Assemblymember Brian Cunningham. They're already fighting — let them know the community is behind them and urge escalation." linkHref="#emails" linkLabel="See Templates" />
-      <HelpCard num="04" title="Spread the Word" body="Post on Instagram, send to your group chats, forward to anyone who lives in or loves PLG. Every share reaches a new network — and this campaign grows one conversation at a time." linkHref={null} linkLabel={null} shareBtn={true} />
-      <HelpCard num="05" title="File a DOB Complaint" body="Contact the NYC Department of Buildings and formally request a review of the FAR calculations, open space ratios, and air rights transfers before any demolition proceeds." linkHref="https://nyc.gov/buildings" linkLabel="NYC Buildings Site" external={true} />
-      <HelpCard num="06" title="Show Up in Person" body="A Sunday demonstration outside St. Francis of Assisi at 1081 Nostrand Ave during Mass is one of the most visible ways to put pressure on church leadership. Bring neighbors." linkHref="#contacts" linkLabel="Get the Address" />
-      <HelpCard num="07" title="Join the Effort" body="Want to canvass, attend meetings, or help organize? This campaign runs on neighbors showing up for neighbors. Reach out and get involved." linkHref="#" linkLabel="Contact Amy" />
+      <HelpCard num="01" title="Email the Diocese" body="Contact Bishop Robert Brennan, Father Vassalotti, and the Diocese directly. A personal email from a constituent lands in a real inbox and demands a real response." linkHref="#emails" linkLabel="See Email Templates" />
+      <HelpCard num="02" title="Contact Elected Officials" body="Email Council Member Rita Joseph and Assemblymember Brian Cunningham. They're already fighting — let them know the community is behind them and urge escalation." linkHref="#emails" linkLabel="See Email Templates" />
+      <HelpCard num="03" title="Spread the Word" body="Post on Instagram, send to your group chats, forward to anyone who lives in or loves PLG. Every share reaches a new network — and this campaign grows one conversation at a time." linkHref={null} linkLabel={null} shareBtn={true} />
+      <HelpCard num="04" title="File a DOB Complaint" body="Contact the NYC Department of Buildings and formally request a review of the FAR calculations, open space ratios, and air rights transfers before any demolition proceeds." linkHref="https://www.nyc.gov/site/buildings/dob/file-a-complaint.page" linkLabel="File a Complaint" external={true} />
+      <HelpCard num="05" title="Show Up in Person" body="A Sunday demonstration outside St. Francis of Assisi at 1081 Nostrand Ave during Mass is one of the most visible ways to put pressure on church leadership. Bring neighbors." linkHref="#contacts" linkLabel="Get the Address" />
+      <HelpCard num="06" title="Join the Effort" body="Want to canvass, attend meetings, or help organize? This campaign runs on neighbors showing up for neighbors. Reach out and get involved." linkHref="#" linkLabel="Contact Amy" />
     </div>
   </div>
 </section>
