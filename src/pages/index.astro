@@ -430,7 +430,7 @@ Prospect Lefferts Gardens, Brooklyn`} />
   const shareBtn = document.getElementById('hero-share');
   if (shareBtn) {
     shareBtn.addEventListener('click', async () => {
-      const data = { title: '331 Maple St', text: 'A 12-story luxury tower is planned for Prospect Lefferts Gardens. Sign the petition and help stop it.', url: window.location.href };
+      const data = { title: '331 Maple St', text: 'Protect PLG. A 12-story luxury tower is coming to Maple Street. Help us stop it — sign the petition and spread the word.', url: window.location.href };
       if (navigator.share) {
         try { await navigator.share(data); } catch {}
       } else {
