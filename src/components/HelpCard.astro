@@ -24,7 +24,7 @@ const { num, title, body, linkHref, linkLabel, external = false, shareBtn = fals
 <script>
   document.querySelectorAll('.card-share-btn').forEach(btn => {
     btn.addEventListener('click', async () => {
-      const data = { title: 'Save 331 Maple St', text: 'Protect PLG. A 12-story luxury tower is coming to Maple Street. Help us stop it — sign the petition and spread the word.', url: window.location.origin };
+      const data = { title: '331 Maple St — Prospect Lefferts Gardens', text: 'The 1909 parish school on Maple Street has been demolished. PLG neighbors are calling for a transparent, legally compliant development process and real affordable housing in what gets built next.', url: window.location.origin };
       if (navigator.share) {
         try { await navigator.share(data); } catch {}
       } else {
