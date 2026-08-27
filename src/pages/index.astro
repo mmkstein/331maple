@@ -613,16 +613,13 @@ Prospect Lefferts Gardens, Brooklyn`} />
 
 <style is:global>
   .hero {
-    min-height: 72vh;
     background: var(--black);
-    display: grid;
-    grid-template-rows: auto 1fr;
     position: relative;
     overflow: hidden;
   }
   .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 120%, #C8281A22 0%, transparent 70%); pointer-events: none; }
   .hero::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E"); pointer-events: none; opacity: 0.4; }
-  .hero-body { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 3.5rem 2rem 3rem; position: relative; z-index: 5; }
+  .hero-body { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5.5rem 2rem 5rem; position: relative; z-index: 5; }
   .eyebrow { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); margin-bottom: 1.5rem; animation: fadeUp 0.8s ease both; }
   .eyebrow span { display: inline-block; background: rgba(200,40,26,0.15); border: 1px solid rgba(200,40,26,0.4); padding: 0.3rem 0.9rem; border-radius: 2px; }
   .hero-headline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 8.5vw, 7rem); line-height: 0.98; letter-spacing: 0.02em; animation: fadeUp 0.8s 0.15s ease both; }
