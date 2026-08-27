@@ -7,15 +7,15 @@ const home = activePage === 'home';
 ---
 
 <nav>
-  <a href="/" class="nav-logo">331 Maple St</a>
+  <a href="/" class="nav-logo">Protect PLG</a>
   <button class="nav-hamburger" aria-label="Open menu" id="nav-toggle">
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="nav-links">
     <li><a href={home ? '#asks' : '/#asks'}>Our Asks</a></li>
-    <li><a href={home ? '#timeline' : '/#timeline'}>What Happened</a></li>
+    <li><a href={home ? '#case' : '/#case'}>331 Maple St</a></li>
     <li><a href="/voices" class={activePage === 'voices' ? 'active' : ''}>Neighbor Voices</a></li>
-    <li><a href={home ? '#action' : '/#action'}>Take Action</a></li>
+    <li><a href={home ? '#join' : '/#join'}>Join</a></li>
   </ul>
 </nav>
 

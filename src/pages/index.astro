@@ -2,12 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import HelpCard from '../components/HelpCard.astro';
-import EmailBlock from '../components/EmailBlock.astro';
 import '../styles/global.css';
 ---
 
-<Layout title="331 Maple St — Prospect Lefferts Gardens">
+<Layout title="Protect PLG — Prospect Lefferts Gardens">
 
 <!-- ─── HERO ─── -->
 <section class="hero">
@@ -16,26 +14,13 @@ import '../styles/global.css';
   <div class="hero-body">
     <p class="eyebrow"><span>Prospect Lefferts Gardens, Brooklyn</span></p>
     <h1 class="hero-headline">
-      What Gets Built Here<br /><em>Should Benefit PLG.</em>
+      Protect <em>PLG.</em>
     </h1>
     <p class="hero-sub">
-      The historic parish school at 335 Maple Street has been demolished. Our community is now calling for <strong>transparency, full legal compliance, meaningful engagement, and an enforceable affordable-housing commitment</strong> for the development that replaces it.
+      Development accountability, affordable housing, and community participation.
     </p>
     <div class="hero-ctas">
-      <a href="#action" class="btn-primary">Help Shape What Comes Next</a>
-      <button class="btn-share" id="hero-share">↗ Share This Page</button>
-    </div>
-  </div>
-</section>
-
-<!-- ─── UPDATE BANNER ─── -->
-<section class="update-banner-section">
-  <div class="container">
-    <div class="update-banner reveal">
-      <p class="update-tag">Update</p>
-      <p>
-        The parish school at 335 Maple Street, built in 1909, has been <strong>demolished</strong>, and construction of the new building is underway. Although the school can no longer be preserved, important questions remain about the development &mdash; its affordability, its compliance with zoning and permitting requirements, and the lack of meaningful community participation in the process.
-      </p>
+      <a href="#join" class="btn-primary">Join the Effort</a>
     </div>
   </div>
 </section>
@@ -45,125 +30,74 @@ import '../styles/global.css';
   <div class="container">
     <div class="about-body reveal" style="max-width:760px;">
       <p class="section-label">What We're Asking For</p>
-      <h2 class="section-title">A say in <em>what replaces it.</em></h2>
-      <p>A development is coming to this site. Our goal is to make sure it is built openly, lawfully, and with a real benefit to the people who live around it.</p>
+      <h2 class="section-title">The same deal, <em>every time.</em></h2>
+      <p>Prospect Lefferts Gardens keeps absorbing large new buildings that are decided with little public notice and no enforceable affordability. Whatever gets built, and wherever, we are asking for the same things:</p>
     </div>
 
     <ul class="facts-list reveal" style="margin-top:2.5rem;">
-      <li><span class="fact-icon">⬤</span><div><span class="fact-strong">Accurate, current information</span> about the approved development plans, made available to the public.</div></li>
+      <li><span class="fact-icon">⬤</span><div><span class="fact-strong">Accurate, current information</span> about approved development plans, made available to the public.</div></li>
       <li><span class="fact-icon">⬤</span><div><span class="fact-strong">A full review of zoning and permitting</span> &mdash; FAR calculations, open-space ratios, and any air-rights transfers &mdash; confirmed by DOB and DCP.</div></li>
       <li><span class="fact-icon">⬤</span><div><span class="fact-strong">Meaningful, enforceable affordable housing</span>, with terms in writing, rather than vague commitments.</div></li>
-      <li><span class="fact-icon">⬤</span><div><span class="fact-strong">Direct dialogue</span> among the church, the developer, elected officials, and the community.</div></li>
-      <li><span class="fact-icon">⬤</span><div><span class="fact-strong">A tangible community benefit</span> from the development for the block and the neighborhood.</div></li>
-      <li><span class="fact-icon">⬤</span><div><span class="fact-strong">Contextual zoning for PLG</span>, so future development across the neighborhood is built to a predictable scale.</div></li>
-      <li><span class="fact-icon">⬤</span><div><span class="fact-strong">A clear public record</span> of how the demolition and development process unfolded.</div></li>
+      <li><span class="fact-icon">⬤</span><div><span class="fact-strong">Direct dialogue</span> among landowners, developers, elected officials, and the community.</div></li>
+      <li><span class="fact-icon">⬤</span><div><span class="fact-strong">A tangible community benefit</span> from each development for the block and the neighborhood.</div></li>
+      <li><span class="fact-icon">⬤</span><div><span class="fact-strong">Contextual zoning for PLG</span>, so future development is built to a predictable scale.</div></li>
+      <li><span class="fact-icon">⬤</span><div><span class="fact-strong">A clear public record</span> of how each project was reviewed and approved.</div></li>
     </ul>
 
     <div class="housing-position reveal">
       <p class="section-label" style="margin-bottom:0.8rem;">Where We Stand on Housing</p>
-      <p>We support the creation of new housing, including greater density where appropriate. We are asking that this development comply fully with applicable requirements, include meaningful affordable housing, and provide a clear public benefit to the community affected by it.</p>
+      <p>We support the creation of new housing, including greater density where appropriate. We are asking that development comply fully with applicable requirements, include meaningful affordable housing, and provide a clear public benefit to the community affected by it.</p>
     </div>
   </div>
 </section>
 
-<!-- ─── THE DEVELOPMENT ─── -->
-<section class="about" id="development" style="background:var(--black); border-top:1px solid rgba(200,40,26,0.2); border-bottom:1px solid rgba(200,40,26,0.2);">
+<!-- ─── WHY DOES THIS KEEP HAPPENING ─── -->
+<section class="about" id="why" style="background:var(--black); border-top:1px solid rgba(200,40,26,0.2); border-bottom:1px solid rgba(200,40,26,0.2);">
+  <div class="container">
+    <div class="about-body reveal" style="max-width:800px;">
+      <p class="section-label">The Bigger Picture</p>
+      <h2 class="section-title">Why does this <em>keep happening?</em></h2>
+      <p>Prospect Lefferts Gardens' zoning was last comprehensively updated in <strong>1961</strong>. Most of the neighborhood is zoned R6 &mdash; a 1960s "Tower in the Park" framework with a floor-area ratio of 2.43 and <strong>no height limit</strong>. On PLG's large lots, that math rewards demolishing smaller buildings and replacing them with much bigger ones.</p>
+      <p>The neighborhood has been formally asking the Department of City Planning for a <strong>contextual rezoning study since 2008</strong>. Park Slope, Windsor Terrace, and Kensington all received contextual zoning with height limits years ago. PLG did not.</p>
+      <p>PLG has added thousands of units over the past decade, much of it market-rate, with one-bedrooms renting for $3,000&ndash;$4,000 a month. The gap here is affordability and predictability &mdash; not raw supply.</p>
+    </div>
+
+    <div class="about-body reveal" style="max-width:800px; margin-top:2.5rem;">
+      <p class="section-label" style="margin-bottom:0.8rem;">How the Process Works</p>
+    </div>
+    <ul class="facts-list reveal">
+      <li><span class="fact-icon">⬤</span><div><span class="fact-strong">As-of-right building.</span> If a project fits the existing zoning, the developer can build it with DOB permits alone &mdash; no public hearing, no City Council vote.</div></li>
+      <li><span class="fact-icon">⬤</span><div><span class="fact-strong">DOB review.</span> The Department of Buildings checks plans against the zoning and building code, including FAR, open space, and any air-rights transfers. Its records are public, but not always easy to read.</div></li>
+      <li><span class="fact-icon">⬤</span><div><span class="fact-strong">ULURP.</span> The Uniform Land Use Review Procedure is the public process &mdash; community board, borough president, City Planning Commission, City Council. It is only triggered when a project needs a zoning change, variance, or special permit. An as-of-right building skips it entirely.</div></li>
+      <li><span class="fact-icon">⬤</span><div><span class="fact-strong">Contextual rezoning.</span> A neighborhood-wide zoning change, run through ULURP, is the tool that would set predictable height and setback rules for future projects across PLG.</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ─── THE 331 MAPLE STREET CASE ─── -->
+<section class="about" id="case">
   <div class="container">
     <div class="before-after reveal">
       <div class="ba-card">
         <div class="ba-label ba-label-before">Demolished, 2026</div>
         <img src="/331mapleparish.png" alt="The former parish school at 335 Maple St, built 1909" />
-        <p class="ba-caption">The 335 Maple St parish school, built 1909. Demolished in 2026 after community efforts to preserve it and obtain transparency around the redevelopment plan.</p>
+        <p class="ba-caption">The 335 Maple St parish school, built 1909. Demolished in 2026.</p>
       </div>
       <div class="ba-arrow">→</div>
       <div class="ba-card">
-        <div class="ba-label ba-label-after">Proposed</div>
-        <img src="/331maplemockup.png" alt="Developer rendering of the proposed building at 331 Maple St" />
-        <p class="ba-caption">Developer rendering of the proposed 12-story, 118-foot, 99-unit building. Affordability terms have not been made public.</p>
+        <div class="ba-label ba-label-after">Under construction</div>
+        <img src="/331maplemockup.png" alt="Developer rendering of the building at 331 Maple St" />
+        <p class="ba-caption">Developer rendering of the 12-story, 118-foot, 99-unit building now under construction. Affordability terms have not been made public.</p>
       </div>
     </div>
 
-    <div class="about-grid reveal" style="margin-top:4rem;">
-      <div class="about-body reveal">
-        <p class="section-label">The Development</p>
-        <h2 class="section-title">What is proposed <em>for the site.</em></h2>
-        <p>The land at 331&ndash;335 Maple Street is owned by the Roman Catholic Church of St. Francis of Assisi and St. Blaise. The parish entered into a long-term ground lease with developer <strong>Candor Capital</strong> for a new building on the site.</p>
-        <p>In August 2025, plans were filed with the Department of Buildings for a <strong>12-story, 118-foot building with 99 residences</strong> and roughly 24,000 square feet of community-facility space, on a lot zoned R6. According to Father Vassalotti, church leadership was shown a six-story concept before the lease was signed; the plans filed with DOB are for twelve stories.</p>
-        <p>In January 2026, demolition activity began at 335 Maple Street before permits had been issued. DOB issued a <strong>Stop Work Order</strong>, and the developer subsequently received violations and fines totaling roughly <strong>$30,000</strong>. The parish school was demolished in 2026, and construction of the new building is now underway.</p>
-        <p>We are not opposed to new housing on this site. We are asking that the project comply fully with zoning and permitting law, that its affordability terms be made public and enforceable, and that it deliver a genuine benefit to the surrounding community.</p>
-      </div>
-      <div class="reveal">
-        <ul class="facts-list">
-          <li><span class="fact-icon">⬤</span><div><span class="fact-strong">12 stories, 118 feet, 99 residences</span> on an R6 lot &mdash; roughly 98,000 sq ft total, including ~24,000 sq ft of community-facility space</div></li>
-          <li><span class="fact-icon">⬤</span><div><span class="fact-strong">Owner / applicant:</span> Candor Capital (Charles Wurzberger); land owned by the parish of St. Francis of Assisi and St. Blaise</div></li>
-          <li><span class="fact-icon">⬤</span><div><span class="fact-strong">Affordability terms not public</span> &mdash; no published, enforceable commitment on the number of affordable units or income bands</div></li>
-          <li><span class="fact-icon">⬤</span><div><span class="fact-strong">Stop Work Order in January 2026</span> after demolition activity began without a permit; ~$30,000 in violations and fines</div></li>
-          <li><span class="fact-icon">⬤</span><div><span class="fact-strong">Open zoning question:</span> community members reviewing ACRIS have not identified a recorded air-rights transfer supporting the proposed floor area &mdash; DOB and DCP should confirm the FAR basis</div></li>
-          <li><span class="fact-icon">⬤</span><div><span class="fact-strong">PLG has no contextual zoning</span> &mdash; unlike Park Slope, Windsor Terrace, and Kensington nearby</div></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── WHAT HAPPENED ─── -->
-<section class="urgency-section" id="timeline">
-  <div class="container">
-    <div class="reveal" style="text-align:center; margin-bottom:3rem;">
-      <p class="section-label">What Happened</p>
-      <h2 class="section-title">A record of <em>the process.</em></h2>
-      <p class="emails-intro" style="margin:0.5rem auto 0;">The 1909 parish school was demolished despite community efforts to preserve it and obtain greater transparency around the redevelopment plan. Its loss shows why residents need earlier notice, clearer public information, and a meaningful voice before irreversible decisions are made.</p>
-    </div>
-    <div class="urgency-grid urgency-grid--timeline-only">
-      <div class="reveal">
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="tl-dot">✓</div>
-            <div class="tl-text"><strong>Aug 2025 — Plans filed with DOB</strong><span>Applications for a 12-story, 118-foot, 99-unit building on the church-owned lot are filed. <a href="https://commercialobserver.com/2025/08/candor-capital-housing-331-maple-street-brooklyn/" target="_blank" rel="noopener">Commercial Observer</a>, <a href="https://brooklyneagle.com/articles/2025/08/22/brooklyn-developer-files-plans-for-99-apartments-on-church-owned-lot" target="_blank" rel="noopener">Brooklyn Eagle</a>, <a href="https://newyorkyimby.com/2025/09/permits-filed-for-331-maple-street-in-prospect-lefferts-gardens-brooklyn.html" target="_blank" rel="noopener">NY YIMBY</a></span></div>
-          </div>
-          <div class="timeline-item">
-            <div class="tl-dot">✓</div>
-            <div class="tl-text"><strong>Sep 2025 — Community raises concerns</strong><span>Residents learn of the ground lease and the 12-story plan, and raise concerns at Community Board 9. Father Vassalotti tells neighbors the church was shown a six-story concept before signing.</span></div>
-          </div>
-          <div class="timeline-item">
-            <div class="tl-dot">✓</div>
-            <div class="tl-text"><strong>Oct–Nov 2025 — Petition circulates</strong><span>Neighbors canvass PLG from Sterling to Clarkson Avenue. More than 600 residents sign a petition asking for a smaller building and contextual rezoning. Council Member Rita Joseph and Assemblymember Brian Cunningham engage.</span></div>
-          </div>
-          <div class="timeline-item">
-            <div class="tl-dot">✓</div>
-            <div class="tl-text"><strong>Dec 2025 — Meeting with elected officials</strong><span>Council Member Joseph and Assemblymember Cunningham meet with residents and agree to examine the project's legal basis, including air rights and the terms of the lease. The Diocese is invited and declines to attend.</span></div>
-          </div>
-          <div class="timeline-item">
-            <div class="tl-dot">✓</div>
-            <div class="tl-text"><strong>Jan 2026 — Stop Work Order</strong><span>Demolition activity begins at 335 Maple Street before permits are issued. DOB issues a Stop Work Order; the developer subsequently receives violations and fines totaling roughly $30,000. <a href="https://www.nyc.gov/site/buildings/index.page" target="_blank" rel="noopener">NYC DOB records</a></span></div>
-          </div>
-          <div class="timeline-item">
-            <div class="tl-dot">✓</div>
-            <div class="tl-text"><strong>Feb 2026 — Meeting with a Diocese representative</strong><span>The Diocese agrees to a meeting with elected officials but, residents say, sends a representative without detailed knowledge of the development. Substantive questions about the lease and air rights go unanswered.</span></div>
-          </div>
-          <div class="timeline-item">
-            <div class="tl-dot">✓</div>
-            <div class="tl-text"><strong>Spring 2026 — Parish school demolished</strong><span>The 1909 parish school at 335 Maple Street is demolished.</span></div>
-          </div>
-          <div class="timeline-item">
-            <div class="tl-dot" style="background:var(--accent); color:#000;">!</div>
-            <div class="tl-text"><strong>2026 — Construction underway</strong><span>Construction of the new building has begun and has reached the second floor. The current approved plans, the affordability terms, the FAR basis, and any community-benefit commitment have not been made public. This site tracks those questions.</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── BROADER CONTEXT ─── -->
-<section class="about" id="context">
-  <div class="container">
-    <div class="about-body reveal" style="max-width:800px;">
-      <p class="section-label">Broader Context</p>
-      <h2 class="section-title">This isn't just about <em>one building.</em></h2>
-      <p>PLG carries R6 zoning &mdash; a "Tower in the Park" framework from the 1960s with no height limit and a floor-area ratio of 2.43. Large lots and no contextual controls make it attractive to demolish smaller buildings and replace them with much larger ones, out of step with the surrounding streets.</p>
-      <p>Prospect Lefferts Gardens has added thousands of units over the past decade. Many recent buildings are market-rate, with one-bedrooms renting for $3,000&ndash;$4,000 a month. The neighborhood's pressing need is for housing people who live here can actually afford &mdash; and for a predictable scale of development.</p>
-      <p>Contextual zoning already exists in Park Slope, Windsor Terrace, Kensington, and parts of Bed-Stuy. PLG has been formally requesting a contextual rezoning study from City Planning since 2008. We are asking the City to take that step, so the next project on the next block is not decided the same way this one was.</p>
+    <div class="about-body reveal" style="max-width:800px; margin-top:4rem;">
+      <p class="section-label">The 331 Maple Street Case</p>
+      <h2 class="section-title">How one project <em>unfolded.</em></h2>
+      <p>The clearest recent example is 331&ndash;335 Maple Street. The land is owned by the Roman Catholic parish of St. Francis of Assisi and St. Blaise, which signed a long-term ground lease with developer <strong>Candor Capital</strong>. In August 2025, plans were filed with the Department of Buildings for a 12-story, 118-foot building with 99 apartments and about 24,000 square feet of community-facility space, on an R6 lot <span class="cite">(<a href="https://commercialobserver.com/2025/08/candor-capital-housing-331-maple-street-brooklyn/" target="_blank" rel="noopener">Commercial Observer</a>, <a href="https://brooklyneagle.com/articles/2025/08/22/brooklyn-developer-files-plans-for-99-apartments-on-church-owned-lot" target="_blank" rel="noopener">Brooklyn Eagle</a>, <a href="https://newyorkyimby.com/2025/09/permits-filed-for-331-maple-street-in-prospect-lefferts-gardens-brooklyn.html" target="_blank" rel="noopener">NY YIMBY</a>)</span>.</p>
+      <p>According to Father Thomas Vassalotti, church leadership was shown a six-story concept before the lease was signed; the plans filed with DOB were for twelve stories. Because the project is largely as-of-right, there was no public hearing.</p>
+      <p>In January 2026, demolition activity began at 335 Maple Street before the required permits were issued. DOB issued a <strong>Stop Work Order</strong>, and the developer went on to receive violations and fines totaling roughly <strong>$30,000</strong>. The 1909 parish school was demolished later that year, and construction is now underway.</p>
+      <p>Questions about the project's zoning basis remain open. Community members who have reviewed ACRIS records have not identified a recorded air-rights transfer between the development lot and the larger church lot that would support the building's floor area. Residents have asked DOB and City Planning to confirm the FAR calculation and publish the review. Affordability terms for the building have not been made public.</p>
     </div>
   </div>
 </section>
@@ -195,333 +129,59 @@ import '../styles/global.css';
   </div>
 </section>
 
-<!-- ─── EMAIL TEMPLATES ─── -->
-<section class="emails-section" id="emails">
-  <div class="container">
-    <div class="reveal">
-      <p class="section-label">Email Templates</p>
-      <h2 class="section-title">Send a message. <em>Make it count.</em></h2>
-      <p class="emails-intro">Personalized emails from residents carry real weight. Use these as a starting point &mdash; add your own name and your own connection to the neighborhood. Every template asks for transparency, legal compliance, and enforceable affordable housing, not for stopping construction.</p>
-    </div>
-
-    <div class="accordion reveal">
-
-      <div class="accordion-item">
-        <button class="accordion-trigger">
-          <span class="acc-label"><span class="acc-tag">Church</span> Diocese of Brooklyn &amp; Church Leadership</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-content">
-          <EmailBlock id="email-diocese-1" to="Bishop Robert Brennan" toEmail="bishopofbrooklyn@diobrook.org" subject="331 Maple St: Request for Transparency and an Affordable-Housing Commitment" body={`Dear Bishop Brennan,
-
-My name is [YOUR NAME], and I am a resident of Prospect Lefferts Gardens. I am writing about the development planned for the church-owned site at 331-335 Maple Street.
-
-The parish school has been demolished, and a new building will be constructed. I am asking the Diocese to make sure that project is one the parish and the neighborhood can be proud of.
-
-Specifically, I am asking the Diocese to:
-- Make the current, approved development plans available to the community.
-- Commit publicly to a defined amount of permanently affordable housing in the building, with the terms in writing.
-- Meet with Council Member Rita Joseph, Assemblymember Brian Cunningham, and community representatives about the project and its impact on the block.
-
-The Church has been a pillar of this neighborhood for generations. What is built on this site will carry the parish's name. I respectfully ask you to lead on transparency and affordability here.
-
-Thank you for your time and consideration.
-
-[YOUR NAME]
-Prospect Lefferts Gardens, Brooklyn`} />
-          <EmailBlock id="email-diocese-2" to="Father Thomas Vassalotti, St. Francis of Assisi" toEmail="fathertomv@gmail.com" subject="A Message from Your PLG Neighbors: 331 Maple St" body={`Dear Father Tom,
-
-My name is [YOUR NAME], and I am a resident of Prospect Lefferts Gardens. I know you tried to advocate for a smaller building at 331 Maple Street, and I want to thank you for that.
-
-The school is down now, and a new building is coming. I am writing to ask for your help with what happens next. Would you use your voice with the Diocese and the developer to press for:
-- The current plans to be shared openly with the community.
-- A written, enforceable commitment to affordable housing in the building.
-- A meeting between Church leadership, the developer, our elected officials, and neighborhood representatives.
-
-You know this block and the people on it. A building that includes real affordable housing and a genuine community benefit would be a good legacy for St. Francis of Assisi on Maple Street. We would be grateful for your help getting there.
-
-Thank you,
-[YOUR NAME]
-Prospect Lefferts Gardens, Brooklyn`} />
-          <EmailBlock id="email-diocese-3" to="Vincent LeVien, Director of External Affairs, Diocese of Brooklyn" toEmail="vlevien@desalesmedia.org" subject="Request: Diocese Engagement on the 331 Maple St Development" body={`Dear Mr. LeVien,
-
-My name is [YOUR NAME], and I am a resident of Prospect Lefferts Gardens writing to ask the Diocese of Brooklyn to engage with our community on the development at 331-335 Maple Street.
-
-The parish school has been demolished and a new building is planned. Council Member Rita Joseph and Assemblymember Brian Cunningham have been seeking a meeting with Church leadership about the project for months.
-
-I am asking you to help arrange that meeting, and to encourage the Diocese to:
-- Share the current, approved development plans with the community.
-- Commit in writing to a defined amount of affordable housing in the building.
-
-Residents are not asking to stop construction. We are asking for transparency and for the affordable housing this neighborhood needs. Please bring this request to Bishop Brennan.
-
-Thank you,
-[YOUR NAME]
-Prospect Lefferts Gardens, Brooklyn`} />
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-trigger">
-          <span class="acc-label"><span class="acc-tag">City Hall</span> Mayor's Community Affairs Unit</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-content">
-          <EmailBlock id="email-mayor" to="constituentservices@cau.nyc.gov | Mayor's Community Affairs Unit" toEmail="constituentservices@cau.nyc.gov" subject="Community Concern: Transparency and Affordability at 331 Maple St, Prospect Lefferts Gardens" body={`Hello,
-
-My name is [YOUR NAME], and I am a resident of Prospect Lefferts Gardens writing to the Mayor's Community Affairs Unit about the development at 331-335 Maple Street.
-
-The 1909 parish school on this church-owned site has been demolished, and a 12-story, 99-unit building is planned by developer Candor Capital. The current plans, the affordability terms, and the zoning basis for the project have not been made public.
-
-I am asking the Mayor's office to:
-- Help convene the Diocese, the developer, and our elected officials for a meeting with community representatives.
-- Ask DOB and City Planning to confirm the project's compliance with FAR, open-space, and air-rights requirements, and to publish that review.
-- Encourage a binding affordable-housing commitment and a clear community benefit as part of the project.
-
-Thank you,
-[YOUR NAME]
-Prospect Lefferts Gardens, Brooklyn`} />
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-trigger">
-          <span class="acc-label"><span class="acc-tag">City Council</span> Council Member Rita Joseph</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-content">
-          <EmailBlock id="email-rita" to="rjoseph@council.nyc.gov | CC: BGrady@council.nyc.gov" toEmail="rjoseph@council.nyc.gov" subject="331 Maple St: Please Obtain and Publish the Current Plans, and Push for Affordability" body={`Dear Council Member Joseph,
-
-My name is [YOUR NAME], and I am a resident of Prospect Lefferts Gardens. Thank you for the work your office has already done on 331 Maple Street.
-
-Now that the parish school has been demolished and a new building is planned, I am asking your office to:
-- Obtain the developer's current, approved plans and make them public.
-- Press the Diocese and the developer for a written, enforceable affordable-housing commitment in the building.
-- Ask what community benefit the project will provide, and advocate for one that matters on this block &mdash; for example, support for Providence House on Lincoln Road.
-- Continue pursuing a contextual rezoning study for PLG with City Planning.
-
-The community appreciates your persistence and wants to support this effort however we can.
-
-Respectfully,
-[YOUR NAME]
-Prospect Lefferts Gardens, Brooklyn`} />
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-trigger">
-          <span class="acc-label"><span class="acc-tag">State Assembly</span> Assemblymember Brian Cunningham</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-content">
-          <EmailBlock id="email-cunningham" to="cunninghamba@nyassembly.gov" toEmail="cunninghamba@nyassembly.gov" subject="331 Maple St: State-Level Support for Transparency and Affordable Housing" body={`Dear Assemblymember Cunningham,
-
-My name is [YOUR NAME], and I am a resident of Prospect Lefferts Gardens. Thank you for pressing the Diocese of Brooklyn for a meeting alongside Council Member Joseph.
-
-With the parish school now demolished and a 12-story building planned at 331-335 Maple Street, I am asking your office to:
-- Keep pushing for a meeting with Church leadership and the developer.
-- Use state housing programs and leverage to encourage a real, enforceable affordable-housing commitment in the building.
-- Support a formal review by DOB and City Planning of the project's FAR calculations and any air-rights transfers, with the results made public.
-
-Residents support new housing here. We are asking that it be affordable, lawful, and open to public scrutiny.
-
-Respectfully,
-[YOUR NAME]
-Prospect Lefferts Gardens, Brooklyn`} />
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-trigger">
-          <span class="acc-label"><span class="acc-tag">City Agency</span> NYC Department of Buildings</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-content">
-          <EmailBlock id="email-dob" to="buildings@buildings.nyc.gov | CC: brooklyn@buildings.nyc.gov" toEmail="buildings@buildings.nyc.gov" subject="Request for Review: Zoning and FAR Basis at 331-335 Maple St, Brooklyn 11225" body={`Hello,
-
-My name is [YOUR NAME], and I am a resident of Prospect Lefferts Gardens writing about the development at 331-335 Maple Street, Brooklyn, NY 11225.
-
-The site is zoned R6. Plans on file are for a 12-story, 118-foot, 99-unit building. Community members who have reviewed ACRIS have not identified a recorded zoning-lot-development agreement or air-rights transfer that would support the proposed floor area.
-
-I am requesting that DOB:
-- Confirm the FAR calculation, open-space ratio, and lot-area basis for the approved plans.
-- Confirm whether any air-rights transfer between the development lot and the larger church lot has been recorded and relied upon.
-- Make the results of that review publicly available.
-
-I would also ask that the January 2026 Stop Work Order and the associated violations at this address remain fully resolved and on the public record.
-
-Thank you,
-[YOUR NAME]
-Prospect Lefferts Gardens, Brooklyn`} />
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-trigger">
-          <span class="acc-label"><span class="acc-tag">City Planning</span> DCP Director Sideya Sherman</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-content">
-          <EmailBlock id="email-dcp" to="ssherman@planning.nyc.gov | CC: BK_DL@planning.nyc.gov" toEmail="ssherman@planning.nyc.gov" subject="331 Maple St Review and a Contextual Rezoning Study for Prospect Lefferts Gardens" body={`Dear Director Sherman,
-
-My name is [YOUR NAME], and I am a resident of Prospect Lefferts Gardens writing about two related matters.
-
-First, the development at 331-335 Maple Street: a 12-story, 118-foot, 99-unit building is planned on an R6 lot. I am asking City Planning to review the FAR calculations, open-space ratios, and any air-rights transfers for the approved plans, and to publish that review.
-
-Second, contextual zoning: PLG is one of the last neighborhoods bordering Prospect Park without contextual protections. Park Slope, Windsor Terrace, and Kensington have height limits; PLG does not. The neighborhood's zoning was last updated in 1961, and the community has been requesting a contextual rezoning study since 2008. I am asking you to begin that study, so future development is built to a predictable scale.
-
-Thank you,
-[YOUR NAME]
-Prospect Lefferts Gardens, Brooklyn`} />
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-trigger">
-          <span class="acc-label"><span class="acc-tag">Local</span> Public Advocate</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-content">
-          <EmailBlock id="email-advocate" to="gethelp@advocate.nyc.gov | NYC Public Advocate" toEmail="gethelp@advocate.nyc.gov" subject="Request: Transparency and Affordability at 331 Maple St, Prospect Lefferts Gardens" body={`Hello,
-
-My name is [YOUR NAME], and I am a resident of Prospect Lefferts Gardens writing to ask for the Public Advocate's help on the development at 331-335 Maple Street.
-
-The 1909 parish school on this church-owned site has been demolished, and a 12-story, 99-unit building is planned by developer Candor Capital. Demolition activity began without a permit in January 2026 and drew a Stop Work Order and roughly $30,000 in fines. The current plans and the affordability terms have not been made public, and the Diocese has not met substantively with elected officials about the project.
-
-I am asking the Public Advocate's office to:
-- Publicly urge the Diocese of Brooklyn to meet with Council Member Joseph and Assemblymember Cunningham and to release the current plans.
-- Call for a binding affordable-housing commitment and a defined community benefit in the project.
-- Support a DOB and City Planning review of the project's FAR and air-rights basis, with the findings made public.
-
-Thank you,
-[YOUR NAME]
-Prospect Lefferts Gardens, Brooklyn`} />
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- ─── CENTRAL MESSAGE ─── -->
 <section class="creed-section">
   <div class="container">
     <div class="creed reveal">
-      <p>The school is gone, but the community still deserves a say in what replaces it. We are advocating for a <em>transparent, legally compliant development process</em>, <em>meaningful affordable housing</em>, and a <em>real benefit</em> for Prospect Lefferts Gardens.</p>
+      <p>Prospect Lefferts Gardens keeps getting the same deal: big buildings, short notice, no enforceable affordability. <em>Protect PLG</em> works to change how those decisions get made &mdash; one project at a time, and neighborhood-wide.</p>
     </div>
   </div>
 </section>
 
-<!-- ─── TAKE ACTION ─── -->
-<section class="help-section" id="action">
+<!-- ─── JOIN THE EFFORT ─── -->
+<section class="join-section" id="join">
   <div class="container">
     <div class="reveal">
-      <p class="section-label">Take Action</p>
-      <h2 class="section-title">Every action <em>counts.</em></h2>
+      <p class="section-label">Join the Effort</p>
+      <h2 class="section-title">Add your name. <em>Lend a hand.</em></h2>
+      <p class="join-intro">Protect PLG runs on neighbors showing up for each other &mdash; canvassing, showing up to meetings, digging through records, and spreading the word. Tell us how you can help and we'll be in touch.</p>
     </div>
-    <div class="help-grid">
-      <HelpCard num="01" title="Email the Decision-Makers" body="Send a personal email to the Diocese, the developer's overseers, and your elected officials. Ask for the current plans, an enforceable affordable-housing commitment, and a public meeting." linkHref="#emails" linkLabel="See Email Templates" />
-      <HelpCard num="02" title="Ask Officials to Publish the Plans" body="Contact Council Member Rita Joseph and Assemblymember Brian Cunningham. Ask them to obtain the developer's current approved plans and make them public." linkHref="#emails" linkLabel="See Email Templates" />
-      <HelpCard num="03" title="Request a Zoning &amp; Permitting Review" body="Ask DOB and City Planning to confirm the project's FAR calculations, open-space ratios, and any air-rights transfers &mdash; and to publish the results." linkHref="https://www.nyc.gov/site/buildings/dob/file-a-complaint.page" linkLabel="File with DOB" external={true} />
-      <HelpCard num="04" title="Press for Affordable Housing" body="Every message to an official or to the Diocese should ask for a written, enforceable commitment on the number of affordable units and the income levels they serve." linkHref="#emails" linkLabel="See Email Templates" />
-      <HelpCard num="05" title="Support Contextual Rezoning" body="The bigger fix is contextual zoning for PLG, so future projects are built to a predictable scale. Ask City Planning to begin the study the community has requested since 2008." linkHref="#emails" linkLabel="Email City Planning" />
-      <HelpCard num="06" title="Spread the Word" body="Share this page with anyone who lives in or cares about PLG. The more people who know what is happening on this block, the harder it is to keep the plans out of public view." linkHref={null} linkLabel={null} shareBtn={true} />
-      <HelpCard num="07" title="Join the Effort" body="Want to attend meetings, help document the process, or organize with neighbors? This work runs on people showing up for each other. Reach out and get involved." linkHref="#" linkLabel="Contact Amy" />
-    </div>
-  </div>
-</section>
 
-<!-- ─── KEY CONTACTS ─── -->
-<section class="contacts-section" id="contacts">
-  <div class="container">
-    <div class="reveal">
-      <p class="section-label">Key Contacts</p>
-      <h2 class="section-title">Who to <em>reach.</em></h2>
-    </div>
-    <div class="contacts-grid">
-      <div class="contact-group reveal">
-        <h3>Church &amp; Diocese</h3>
-        <div class="contact-entry">
-          <span class="contact-name">Bishop Robert Brennan</span>
-          <span class="contact-role">Diocese of Brooklyn, 310 Prospect Park West</span>
-          <div class="contact-links">
-            <a href="mailto:bishopofbrooklyn@diobrook.org">bishopofbrooklyn@diobrook.org</a>
-            <a href="tel:+17189657300">(718) 965-7300</a>
-          </div>
-        </div>
-        <div class="contact-entry">
-          <span class="contact-name">Father Thomas Vassalotti</span>
-          <span class="contact-role">St. Francis of Assisi Church, 1081 Nostrand Ave</span>
-          <div class="contact-links">
-            <a href="mailto:fathertomv@gmail.com">fathertomv@gmail.com</a>
-            <a href="tel:+19178858367">917-885-8367</a>
-          </div>
-        </div>
-        <div class="contact-entry">
-          <span class="contact-name">Vincent LeVien</span>
-          <span class="contact-role">Director of External Affairs, Diocese of Brooklyn</span>
-          <div class="contact-links">
-            <a href="mailto:vlevien@desalesmedia.org">vlevien@desalesmedia.org</a>
-            <a href="tel:+17184999705">718-499-9705</a>
-          </div>
-        </div>
+    <form id="join-form" class="join-form reveal" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="207bb50e-9621-42c1-bafe-c8887e520c31" />
+      <input type="hidden" name="subject" value="New Protect PLG signup" />
+      <input type="hidden" name="from_name" value="Protect PLG website" />
+      <input type="checkbox" name="botcheck" class="join-hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+      <div class="join-field">
+        <label for="join-name">Name</label>
+        <input type="text" id="join-name" name="name" required autocomplete="name" />
       </div>
 
-      <div class="contact-group reveal">
-        <h3>Elected Officials</h3>
-        <div class="contact-entry">
-          <span class="contact-name">Council Member Rita Joseph</span>
-          <span class="contact-role">NYC Council, District 40</span>
-          <div class="contact-links">
-            <a href="mailto:rjoseph@council.nyc.gov">rjoseph@council.nyc.gov</a>
-          </div>
-        </div>
-        <div class="contact-entry">
-          <span class="contact-name">Brian Grady</span>
-          <span class="contact-role">Director of Constituent Services, Council Member Joseph</span>
-          <div class="contact-links">
-            <a href="mailto:BGrady@council.nyc.gov">BGrady@council.nyc.gov</a>
-          </div>
-        </div>
-        <div class="contact-entry">
-          <span class="contact-name">Assemblymember Brian Cunningham</span>
-          <span class="contact-role">NYS Assembly, District 43</span>
-          <div class="contact-links">
-            <a href="mailto:cunninghamba@nyassembly.gov">cunninghamba@nyassembly.gov</a>
-          </div>
-        </div>
+      <div class="join-field">
+        <label for="join-email">Email</label>
+        <input type="email" id="join-email" name="email" required autocomplete="email" />
       </div>
 
-      <div class="contact-group reveal">
-        <h3>City Agencies</h3>
-        <div class="contact-entry">
-          <span class="contact-name">NYC Dept of Buildings</span>
-          <div class="contact-links">
-            <a href="mailto:buildings@buildings.nyc.gov">buildings@buildings.nyc.gov</a>
-            <a href="https://nyc.gov/buildings" target="_blank" rel="noopener">nyc.gov/buildings</a>
-          </div>
-        </div>
-        <div class="contact-entry">
-          <span class="contact-name">DCP Director Sideya Sherman</span>
-          <span class="contact-role">NYC Dept of City Planning</span>
-          <div class="contact-links">
-            <a href="mailto:ssherman@planning.nyc.gov">ssherman@planning.nyc.gov</a>
-            <a href="mailto:BK_DL@planning.nyc.gov">BK_DL@planning.nyc.gov</a>
-          </div>
-        </div>
-        <div class="contact-entry">
-          <span class="contact-name">Mayor's CAU</span>
-          <div class="contact-links">
-            <a href="mailto:constituentservices@cau.nyc.gov">constituentservices@cau.nyc.gov</a>
-          </div>
-        </div>
-        <div class="contact-entry">
-          <span class="contact-name">NYC Public Advocate</span>
-          <div class="contact-links">
-            <a href="mailto:gethelp@advocate.nyc.gov">gethelp@advocate.nyc.gov</a>
-          </div>
-        </div>
+      <fieldset class="join-field join-check-group">
+        <legend class="join-legend">How I can help</legend>
+        <label class="join-check"><input type="checkbox" name="help" value="Canvassing" /> Canvassing</label>
+        <label class="join-check"><input type="checkbox" name="help" value="Attending meetings" /> Attending meetings</label>
+        <label class="join-check"><input type="checkbox" name="help" value="Research" /> Research</label>
+        <label class="join-check"><input type="checkbox" name="help" value="Outreach" /> Outreach</label>
+      </fieldset>
+
+      <div class="join-field">
+        <label for="join-message">Message <span style="text-transform:none; letter-spacing:0;">(optional)</span></label>
+        <textarea id="join-message" name="message"></textarea>
       </div>
+
+      <button type="submit" class="btn-primary join-submit">Join the Effort</button>
+      <p class="join-error" id="join-error" hidden>Something went wrong sending that. Please try again in a moment.</p>
+    </form>
+
+    <div class="join-success" id="join-success" hidden>
+      <p><strong>Thanks &mdash; you're on the list.</strong> We'll reach out with next steps and meeting information.</p>
     </div>
   </div>
 </section>
@@ -529,74 +189,36 @@ Prospect Lefferts Gardens, Brooklyn`} />
 <Footer />
 
 <script>
-  // Share button
-  const shareText = 'The 1909 parish school on Maple Street has been demolished. PLG neighbors are calling for a transparent, legally compliant development process and real affordable housing in what gets built next.';
-  const shareBtn = document.getElementById('hero-share');
-  if (shareBtn) {
-    shareBtn.addEventListener('click', async () => {
-      const data = { title: '331 Maple St — Prospect Lefferts Gardens', text: shareText, url: window.location.href };
-      if (navigator.share) {
-        try { await navigator.share(data); } catch {}
-      } else {
-        try { await navigator.clipboard.writeText(window.location.href); } catch {}
-        shareBtn.textContent = 'Link Copied!';
-        setTimeout(() => { (shareBtn as HTMLButtonElement).textContent = '↗ Share This Page'; }, 1800);
+  // Join form — submit to Web3Forms via fetch, show inline success state
+  const form = document.getElementById('join-form') as HTMLFormElement | null;
+  if (form) {
+    const errBox = document.getElementById('join-error');
+    const successBox = document.getElementById('join-success');
+    const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (errBox) errBox.hidden = true;
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          form.hidden = true;
+          if (successBox) successBox.hidden = false;
+          successBox?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          throw new Error(data.message || 'Request failed');
+        }
+      } catch {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Join the Effort'; }
+        if (errBox) errBox.hidden = false;
       }
     });
   }
-
-  // Protected email links — sets href at runtime so address never appears in HTML source
-  (() => {
-    const u = 'amy.qing.lin';
-    const d = 'gmail.com';
-    document.querySelectorAll<HTMLAnchorElement>('.protected-email').forEach(a => {
-      a.href = `mailto:${u}@${d}`;
-    });
-    // Join the Effort card — last help card link
-    const joinLink = document.querySelector<HTMLAnchorElement>('.help-card:last-child .card-link');
-    if (joinLink) joinLink.href = `mailto:${u}@${d}?subject=I want to get involved — 331 Maple St`;
-  })();
-
-  // Accordion
-  document.querySelectorAll('.accordion-trigger').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.closest('.accordion-item')?.classList.toggle('open');
-    });
-  });
-
-  // Copy email
-  document.querySelectorAll<HTMLButtonElement>('.copy-btn').forEach(btn => {
-    btn.addEventListener('click', async () => {
-      const id = btn.dataset.emailId;
-      if (!id) return;
-      const bodyEl = document.getElementById(id);
-      const block = bodyEl?.closest('.email-block');
-      const subjectEl = block?.querySelector('.email-subject');
-      const bodyText = bodyEl?.textContent?.trim() ?? '';
-      const subjectText = subjectEl?.textContent?.replace(/^Subject:\s*/i, '').trim() ?? '';
-      const text = subjectText ? `Subject: ${subjectText}\n\n${bodyText}` : bodyText;
-      try {
-        await navigator.clipboard.writeText(text);
-      } catch {
-        const ta = document.createElement('textarea');
-        ta.value = text; ta.style.position = 'absolute'; ta.style.left = '-9999px';
-        document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
-      }
-      btn.classList.add('copied'); btn.textContent = 'Copied';
-      setTimeout(() => { btn.classList.remove('copied'); btn.textContent = 'Copy Email'; }, 1400);
-    });
-  });
-
-  // Expand email
-  document.querySelectorAll<HTMLButtonElement>('.expand-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const id = btn.dataset.emailId;
-      const bodyEl = id ? document.getElementById(id) : null;
-      if (!bodyEl) return;
-      const expanded = bodyEl.classList.toggle('expanded');
-      btn.textContent = expanded ? 'Read Less' : 'Read More';
-    });
-  });
 
   // Scroll reveal
   document.addEventListener('DOMContentLoaded', () => {
@@ -622,20 +244,11 @@ Prospect Lefferts Gardens, Brooklyn`} />
   .hero-body { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5.5rem 2rem 5rem; position: relative; z-index: 5; }
   .eyebrow { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); margin-bottom: 1.5rem; animation: fadeUp 0.8s ease both; }
   .eyebrow span { display: inline-block; background: rgba(200,40,26,0.15); border: 1px solid rgba(200,40,26,0.4); padding: 0.3rem 0.9rem; border-radius: 2px; }
-  .hero-headline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 8.5vw, 7rem); line-height: 0.98; letter-spacing: 0.02em; animation: fadeUp 0.8s 0.15s ease both; }
+  .hero-headline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 11vw, 9rem); line-height: 0.92; letter-spacing: 0.02em; animation: fadeUp 0.8s 0.15s ease both; }
   .hero-headline em { font-style: normal; color: var(--red); display: block; }
-  .hero-sub { max-width: 640px; margin: 2rem auto 0; font-size: 1.1rem; line-height: 1.65; color: rgba(245,239,224,0.7); animation: fadeUp 0.8s 0.3s ease both; }
+  .hero-sub { max-width: 640px; margin: 2rem auto 0; font-size: 1.15rem; line-height: 1.65; color: rgba(245,239,224,0.7); animation: fadeUp 0.8s 0.3s ease both; }
   .hero-sub strong { color: var(--cream); font-weight: 500; }
   .hero-ctas { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; justify-content: center; animation: fadeUp 0.8s 0.45s ease both; align-items: center; }
-  .btn-share { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; background: none; border: 1px solid rgba(245,239,224,0.25); color: rgba(245,239,224,0.55); padding: 0.75rem 1.4rem; cursor: pointer; transition: all 0.2s; border-radius: 2px; }
-  .btn-share:hover { border-color: rgba(245,239,224,0.6); color: var(--cream); }
-
-  /* ─── UPDATE BANNER ─── */
-  .update-banner-section { background: var(--black); padding: 0 2rem 4rem; }
-  .update-banner { background: rgba(200,40,26,0.08); border: 1px solid rgba(200,40,26,0.35); border-left: 4px solid var(--red); padding: 2rem 2.2rem; max-width: 900px; margin: 0 auto; }
-  .update-tag { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.18em; color: var(--red); margin-bottom: 0.6rem; }
-  .update-banner p:last-child { font-size: 1.02rem; line-height: 1.7; color: rgba(245,239,224,0.8); }
-  .update-banner strong { color: var(--cream); font-weight: 500; }
 
   /* ─── QUOTES STRIP ─── */
   .quotes-strip { background: rgba(245,239,224,0.03); border-top: 1px solid rgba(245,239,224,0.07); border-bottom: 1px solid rgba(245,239,224,0.07); padding: 5rem 2rem; }
@@ -650,11 +263,13 @@ Prospect Lefferts Gardens, Brooklyn`} />
   @media (max-width: 900px) { .quotes-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; } }
 
   .about { background: var(--warm-gray); padding-top: 4rem; padding-bottom: 4rem; }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; margin-top: 3rem; }
   .about-body p { color: rgba(245,239,224,0.72); line-height: 1.75; margin-bottom: 1.2rem; font-size: 1.02rem; }
   .about-body strong { color: var(--cream); font-weight: 500; }
+  .about-body a { color: rgba(200,40,26,0.95); text-decoration: none; }
+  .about-body a:hover { color: var(--accent); }
+  .cite { font-size: 0.9rem; color: rgba(245,239,224,0.5); }
   .facts-list { list-style: none; display: flex; flex-direction: column; }
-  .facts-list li { padding: 1.1rem 0; border-bottom: 1px solid rgba(245,239,224,0.1); display: flex; gap: 1rem; align-items: flex-start; font-size: 0.95rem; color: rgba(245,239,224,0.7); line-height: 1.5; }
+  .facts-list li { padding: 1.1rem 0; border-bottom: 1px solid rgba(245,239,224,0.1); display: flex; gap: 1rem; align-items: flex-start; font-size: 0.95rem; color: rgba(245,239,224,0.7); line-height: 1.55; }
   .facts-list li:first-child { border-top: 1px solid rgba(245,239,224,0.1); }
   .fact-icon { color: var(--red); font-size: 0.7rem; margin-top: 0.38rem; flex-shrink: 0; }
   .fact-strong { color: var(--cream); font-weight: 500; }
@@ -662,7 +277,7 @@ Prospect Lefferts Gardens, Brooklyn`} />
   .housing-position { background: rgba(245,239,224,0.04); border: 1px solid rgba(245,239,224,0.12); border-left: 4px solid var(--red); padding: 1.8rem 2rem; margin-top: 3rem; max-width: 760px; }
   .housing-position p:last-child { color: rgba(245,239,224,0.8); line-height: 1.75; font-size: 1.02rem; }
 
-  .before-after { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1.5rem; align-items: center; margin-bottom: 3rem; }
+  .before-after { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1.5rem; align-items: center; }
   .ba-card { position: relative; overflow: hidden; }
   .ba-card img { width: 100%; height: 320px; object-fit: cover; display: block; filter: brightness(0.9); }
   .ba-label { position: absolute; top: 1rem; left: 1rem; font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; padding: 0.3rem 0.8rem; z-index: 2; font-weight: 500; }
@@ -671,74 +286,44 @@ Prospect Lefferts Gardens, Brooklyn`} />
   .ba-caption { font-size: 0.75rem; color: rgba(245,239,224,0.45); padding: 0.7rem 0 0; line-height: 1.4; font-style: italic; }
   .ba-arrow { font-size: 2.5rem; color: var(--red); opacity: 0.6; font-family: 'Bebas Neue', sans-serif; text-align: center; }
 
-  .urgency-section { background: var(--black); border-top: 1px solid rgba(200,40,26,0.2); border-bottom: 1px solid rgba(200,40,26,0.2); padding: 6rem 2rem; }
-  .urgency-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-  .urgency-grid--timeline-only { grid-template-columns: 1fr; max-width: 720px; margin: 0 auto; }
-  .timeline { display: flex; flex-direction: column; position: relative; }
-  .timeline::before { content: ''; position: absolute; left: 0.85rem; top: 0.85rem; bottom: 0.85rem; width: 1px; background: linear-gradient(to bottom, var(--red), rgba(200,40,26,0.1)); }
-  .timeline-item { display: flex; gap: 1.5rem; padding: 1.2rem 0; align-items: flex-start; }
-  .tl-dot { width: 1.7rem; height: 1.7rem; background: var(--red); border-radius: 50%; flex-shrink: 0; margin-top: 0.1rem; display: flex; align-items: center; justify-content: center; font-size: 0.55rem; color: #fff; font-weight: 700; z-index: 1; position: relative; }
-  .tl-dot.dim { background: var(--warm-gray); border: 1px solid rgba(200,40,26,0.4); color: var(--red); }
-  .tl-text strong { display: block; font-size: 0.88rem; font-weight: 500; color: var(--cream); margin-bottom: 0.2rem; }
-  .tl-text span { font-size: 0.82rem; color: rgba(245,239,224,0.5); line-height: 1.5; }
-  .tl-text a { color: rgba(200,40,26,0.9); text-decoration: none; }
-  .tl-text a:hover { color: var(--accent); }
-
   .creed-section { background: var(--cream); color: var(--black); padding: 6rem 2rem; }
   .creed { max-width: 820px; margin: 0 auto; text-align: center; }
   .creed p { font-family: 'DM Serif Display', serif; font-size: clamp(1.4rem, 3vw, 2.1rem); line-height: 1.45; color: var(--black); }
   .creed em { font-style: italic; color: var(--dark-red); }
 
-  .help-section { background: var(--warm-gray); }
-  .help-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
-
-  .emails-section { background: var(--black); }
-  .emails-intro { color: rgba(245,239,224,0.55); max-width: 640px; line-height: 1.7; margin-top: 0.5rem; }
-  .accordion { margin-top: 3rem; border-top: 1px solid rgba(245,239,224,0.1); }
-  .accordion-item { border-bottom: 1px solid rgba(245,239,224,0.1); }
-  .accordion-trigger { width: 100%; background: none; border: none; color: var(--cream); text-align: left; padding: 1.5rem 0; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 400; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-  .accordion-trigger:hover { color: var(--red); }
-  .accordion-trigger .acc-label { display: flex; gap: 1.2rem; align-items: center; }
-  .acc-tag { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; background: rgba(200,40,26,0.2); color: var(--red); padding: 0.22rem 0.6rem; border-radius: 2px; flex-shrink: 0; }
-  .accordion-icon { font-size: 1.2rem; transition: transform 0.25s; color: var(--red); flex-shrink: 0; }
-  .accordion-item.open .accordion-icon { transform: rotate(45deg); }
-  .accordion-content { display: none; padding: 0 0 2rem; }
-  .accordion-item.open .accordion-content { display: block; }
-
-  .contacts-section { background: var(--warm-gray); }
-  .contacts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
-  .contact-group { background: rgba(245,239,224,0.04); border: 1px solid rgba(245,239,224,0.1); padding: 1.8rem; }
-  .contact-group h3 { font-family: 'DM Serif Display', serif; font-size: 1rem; color: var(--cream); margin-bottom: 1.2rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(245,239,224,0.1); }
-  .contact-entry { margin-bottom: 1.1rem; }
-  .contact-entry:last-child { margin-bottom: 0; }
-  .contact-name { font-weight: 500; font-size: 0.9rem; color: var(--cream); display: block; margin-bottom: 0.15rem; }
-  .contact-role { font-size: 0.75rem; color: rgba(245,239,224,0.4); display: block; margin-bottom: 0.3rem; }
-  .contact-links { display: flex; gap: 0.8rem; flex-wrap: wrap; }
-  .contact-links a { font-size: 0.75rem; color: rgba(200,40,26,0.8); text-decoration: none; letter-spacing: 0.06em; transition: color 0.2s; }
-  .contact-links a:hover { color: var(--accent); }
+  /* ─── JOIN FORM ─── */
+  .join-section { background: var(--black); border-top: 1px solid rgba(200,40,26,0.2); }
+  .join-intro { color: rgba(245,239,224,0.55); max-width: 640px; line-height: 1.7; margin-top: 0.5rem; }
+  .join-form { max-width: 620px; margin-top: 2.75rem; display: flex; flex-direction: column; gap: 1.4rem; }
+  .join-field { display: flex; flex-direction: column; gap: 0.45rem; border: none; padding: 0; margin: 0; }
+  .join-field label, .join-legend { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,239,224,0.5); padding: 0; }
+  .join-field input[type="text"], .join-field input[type="email"], .join-field textarea {
+    background: rgba(245,239,224,0.04); border: 1px solid rgba(245,239,224,0.18); color: var(--cream);
+    padding: 0.8rem 0.95rem; font-family: 'DM Sans', sans-serif; font-size: 0.98rem; border-radius: 2px; width: 100%;
+  }
+  .join-field input:focus, .join-field textarea:focus { outline: none; border-color: var(--red); background: rgba(245,239,224,0.06); }
+  .join-field textarea { min-height: 110px; resize: vertical; }
+  .join-check-group { gap: 0.75rem; margin-top: 0.3rem; }
+  .join-check { display: flex; align-items: center; gap: 0.65rem; font-size: 0.98rem; color: rgba(245,239,224,0.8); letter-spacing: 0; text-transform: none; cursor: pointer; }
+  .join-check input { width: 1.05rem; height: 1.05rem; accent-color: var(--red); flex-shrink: 0; }
+  .join-hp { position: absolute !important; left: -9999px !important; opacity: 0 !important; height: 0; width: 0; }
+  .join-submit { align-self: flex-start; margin-top: 0.4rem; }
+  .join-submit:disabled { opacity: 0.6; cursor: default; transform: none; }
+  .join-error { background: rgba(200,40,26,0.12); border: 1px solid rgba(200,40,26,0.45); color: #f2c9c3; padding: 0.9rem 1.1rem; font-size: 0.9rem; border-radius: 2px; }
+  .join-success { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.4); border-left: 4px solid #22c55e; color: #d7f5e0; padding: 1.6rem 1.8rem; margin-top: 2.5rem; max-width: 620px; line-height: 1.6; }
+  .join-success strong { color: #fff; }
 
   @media (max-width: 900px) {
-    .about-grid, .urgency-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .help-grid { grid-template-columns: 1fr 1fr; }
-    .contacts-grid { grid-template-columns: 1fr; }
     .before-after { grid-template-columns: 1fr; }
     .ba-arrow { transform: rotate(90deg); text-align: center; }
     .ba-card img { height: 240px; }
   }
   @media (max-width: 768px) {
-    .hero-body { padding: 2.5rem 1.2rem 2rem; }
+    .hero-body { padding: 3rem 1.2rem 2.5rem; }
     .hero-ctas { flex-direction: column; align-items: stretch; }
-    .update-banner-section { padding: 0 1.2rem 2.5rem; }
-    .update-banner { padding: 1.5rem 1.4rem; }
     .about { padding-top: 2.5rem; padding-bottom: 2.5rem; }
-    .accordion-trigger .acc-label { flex-wrap: wrap; gap: 0.4rem; }
-    .accordion-trigger { padding: 1.2rem 0; }
-    .contact-group { padding: 1.2rem; }
-  }
-  @media (max-width: 600px) {
-    .help-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 400px) {
-    .hero-sub { font-size: 0.95rem; }
+    .hero-sub { font-size: 1rem; }
   }
 </style>
